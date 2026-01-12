@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origins - Promoter Oficial</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      /* Pinegrow Interactions, do not remove */ (function () {
+        try {
+          if (!document.documentElement.hasAttribute("data-pg-ia-disabled")) {
+            window.pgia_small_mq =
+              typeof pgia_small_mq == "string"
+                ? pgia_small_mq
+                : "(max-width:767px)";
+            window.pgia_large_mq =
+              typeof pgia_large_mq == "string"
+                ? pgia_large_mq
+                : "(min-width:768px)";
+            var style = document.createElement("style");
+            var pgcss =
+              'html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';
+            if (
+              document.documentElement.hasAttribute("data-pg-id") &&
+              document.documentElement.hasAttribute("data-pg-mobile")
+            ) {
+              pgia_small_mq = "(min-width:0)";
+              pgia_large_mq = "(min-width:99999px)";
+            }
+            pgcss +=
+              "@media " +
+              pgia_small_mq +
+              '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';
+            pgcss +=
+              "@media " +
+              pgia_large_mq +
+              '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';
+            style.innerHTML = pgcss;
+            document.querySelector("head").appendChild(style);
+          }
+        } catch (e) {
+          console && console.log(e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎭 ORIGINS - EDIÇÃO DE CARNAVAL</h1>
+      <p class="subtitle">
+        Crie sua arte de Promoter Oficial em segundos!
+      </p>
+      <div class="font-test">TESTE DA FONTE DRUK</div>
+      <div class="privacy-note">
+        <strong>🔒 100% Seguro</strong><br />
+        Suas fotos são processadas apenas no seu navegador.<br />
+        Nenhuma imagem é enviada ou armazenada!
+      </div>
+      <div class="error" id="error"></div>
+      <div class="form-section">
+        <h3>📸 1. Envie sua foto</h3>
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon">📸</div>
+          <div class="upload-text">Clique ou arraste sua foto aqui</div>
+          <div class="upload-subtext">Formatos aceitos: JPG, PNG, WEBP</div>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+      <div class="form-section">
+        <h3>📝 2. Preencha suas informações</h3>
+        <div class="lote-info">🎫 Lote Promo R$ 40,00</div>
+        <textarea
+          id="infoText"
+          placeholder="Nome Sobrenome
+Cidade - Estado
+(11) 99999-9999"
+          maxlength="200"
+          style="color: #000000"
+        ></textarea>
+        <p class="info-text">
+          Digite uma informação por linha (máx. 2 nomes na primeira linha)
+        </p>
+      </div>
+      <button class="button" id="generateBtn" disabled>🎨 Gerar Arte</button>
+      <div class="loading" id="loading">Processando sua arte...</div>
+      <div id="preview">
+        <canvas id="canvas-promo"></canvas>
+      </div>
+      <div class="buttons" id="buttons">
+        <button class="button" id="downloadBtn">💾 Baixar Arte</button>
+        <button class="button button-secondary" id="newArtBtn">
+          🎨 Criar Nova Arte
+        </button>
+      </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="pgia/lib/pgia.js"></script>
+  </body>
+</html>

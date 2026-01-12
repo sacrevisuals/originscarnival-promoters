@@ -1,0 +1,12 @@
+# FOlders Ignore
+
+.cursor/
+.kiro/
+.vscode/
+Artifacts/
+projects_docs/
+
+
+# Files Ignore
+
+*.kiroignore
